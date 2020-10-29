@@ -1,4 +1,5 @@
 export const APP_NAME = 'Valora'
+export const WEB_LINK = 'https://valoraapp.com/'
 export const CELO_FAUCET_LINK = 'https://celo.org/app'
 export const CELO_TERMS_LINK = 'https://celo.org/terms'
 export const TOS_LINK = 'https://valoraapp.com/terms'
