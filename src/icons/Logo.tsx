@@ -12,9 +12,10 @@ export enum LogoTypes {
 interface Props {
   height?: number
   type?: LogoTypes
+  style?: ViewStyle
 }
 
-export default function Logo({ height = 32, type = LogoTypes.COLOR }: Props) {
+export default function Logo({ style, height = 32, type = LogoTypes.COLOR }: Props) {
   let fill
   switch (type) {
     case LogoTypes.DARK:
@@ -29,7 +30,7 @@ export default function Logo({ height = 32, type = LogoTypes.COLOR }: Props) {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <Svg width={height} height={height} viewBox="0 0 32 32" fill="none">
         <G>
           <Path
