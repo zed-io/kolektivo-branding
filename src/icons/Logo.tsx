@@ -7,6 +7,7 @@ export enum LogoTypes {
   COLOR = 'COLOR',
   DARK = 'DARK',
   LIGHT = 'LIGHT',
+  GREEN = 'GREEN'
 }
 
 interface Props {
@@ -23,6 +24,9 @@ export default function Logo({ style, height = 32, type = LogoTypes.COLOR }: Pro
       break
     case LogoTypes.LIGHT:
       fill = colors.light
+      break
+    case LogoTypes.GREEN:
+      fill = colors.greenBrand
       break
     default:
       fill = 'url(#prefix__paint0_linear)'
