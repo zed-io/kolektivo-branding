@@ -9,4 +9,6 @@ export const FUNDING_LINK = 'https://valoraapp.com/fund-wallet'
 export const CELO_REWARDS_LINK = 'https://celo.org/celo-rewards-education'
 export const FORUM_LINK = 'https://forum.celo.org/c/support'
 export const CELO_SUPPORT_EMAIL_ADDRESS = 'support@valoraapp.com'
-export const REWARDS_T_AND_C = 'https://celo.org/save-terms-and-conditions'
+export const CELO_REWARDS_T_AND_C = 'https://celo.org/save-terms-and-conditions'
+export const INVITE_REWARDS_TERMS_LINK = 'https://valoraapp.com/invite-rewards'
+
