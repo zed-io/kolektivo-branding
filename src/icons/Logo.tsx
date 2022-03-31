@@ -1,13 +1,13 @@
-import colors from '@celo/react-components/styles/colors'
 import * as React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
 import Svg, { Defs, G, LinearGradient, Path, Stop } from 'react-native-svg'
+import colors from 'src/styles/colors'
 
 export enum LogoTypes {
   COLOR = 'COLOR',
   DARK = 'DARK',
   LIGHT = 'LIGHT',
-  GREEN = 'GREEN'
+  GREEN = 'GREEN',
 }
 
 interface Props {
