@@ -14,9 +14,10 @@ interface Props {
   height?: number
   type?: LogoTypes
   style?: ViewStyle
+  testID?: string
 }
 
-export default function Logo({ style, height = 32, type = LogoTypes.COLOR }: Props) {
+export default function Logo({ style, height = 32, type = LogoTypes.COLOR, testID }: Props) {
   let fill
   switch (type) {
     case LogoTypes.DARK:
@@ -34,7 +35,7 @@ export default function Logo({ style, height = 32, type = LogoTypes.COLOR }: Pro
   }
 
   return (
-    <View style={[styles.container, style]}>
+    <View testID={testID} style={[styles.container, style]}>
       <Svg width={height} height={height} viewBox="0 0 32 32" fill="none">
         <G>
           <Path
