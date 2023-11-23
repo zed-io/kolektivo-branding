@@ -21,13 +21,13 @@ export default function Logo({ style, height = 32, type = LogoTypes.COLOR, testI
   let fill
   switch (type) {
     case LogoTypes.DARK:
-      fill = colors.dark
+      fill = colors.black
       break
     case LogoTypes.LIGHT:
-      fill = colors.light
+      fill = colors.white
       break
     case LogoTypes.GREEN:
-      fill = colors.greenBrand
+      fill = colors.primary
       break
     default:
       fill = 'url(#prefix__paint0_linear)'
