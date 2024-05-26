@@ -1,4 +1,4 @@
-export const APP_NAME = 'Valora'
+export const APP_NAME = 'Kolektivo'
 export const WEB_LINK = 'https://valora.xyz/'
 export const CELO_FAUCET_LINK = 'https://celo.org/app'
 export const CELO_TERMS_LINK = 'https://celo.org/terms'
