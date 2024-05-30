@@ -1,233 +1,75 @@
 import * as React from 'react'
-import Svg, {
-  ClipPath,
-  Defs,
-  G,
-  LinearGradient,
-  Path,
-  RadialGradient,
-  Stop,
-} from 'react-native-svg'
+import { StyleSheet, View, ViewStyle } from 'react-native'
+import Svg, { Path } from 'react-native-svg'
+import Colors from 'src/styles/colors'
 
 interface Props {
   size?: number
+  color?: string
+  style?: ViewStyle
   testID?: string
 }
 
-export default function LogoHeart({ size = 32, testID }: Props) {
+export default function Logo({ style, size = 32, color = Colors.black, testID }: Props) {
   return (
-    <Svg viewBox="0 0 889 889" width={size} height={size} testID={testID}>
-      <Defs>
-        <RadialGradient
-          id="e"
-          cx={3092.1}
-          cy={974.1}
-          r={0.2}
-          fx={3092.1}
-          fy={974.1}
-          gradientTransform="rotate(68.4 472665.336 -5040857.337) scale(1612.4 -2818.5)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#00e09d" />
-          <Stop offset={0.2} stopColor="#00e09d" stopOpacity={0.9} />
-          <Stop offset={1} stopColor="#3beb9f" stopOpacity={0} />
-        </RadialGradient>
-        <RadialGradient
-          id="f"
-          cx={3090.4}
-          cy={972.4}
-          r={0.2}
-          fx={3090.4}
-          fy={972.4}
-          gradientTransform="rotate(47.2 190107.028 -7577516.78) scale(1819.1 -2355.8)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#19cf7a" />
-          <Stop offset={1} stopColor="#82d148" stopOpacity={0} />
-        </RadialGradient>
-        <RadialGradient
-          id="g"
-          cx={3100.9}
-          cy={978.7}
-          r={0.2}
-          fx={3100.9}
-          fy={978.7}
-          gradientTransform="rotate(-101.1 2998729.964 928626.99) scale(1446.8 -1874.4)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#f79a0f" />
-          <Stop offset={0.3} stopColor="#f4a227" stopOpacity={0.9} />
-          <Stop offset={1} stopColor="#e6c832" stopOpacity={0} />
-        </RadialGradient>
-        <RadialGradient
-          id="i"
-          cx={3084.8}
-          cy={972.4}
-          r={0.2}
-          fx={3084.8}
-          fy={972.4}
-          gradientTransform="rotate(52.8 71120.128 -2845995.122) scale(744.2 -1099.2)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#73d444" />
-          <Stop offset={0.3} stopColor="#73d444" stopOpacity={0.5} />
-          <Stop offset={1} stopColor="#73d444" stopOpacity={0} />
-        </RadialGradient>
-        <RadialGradient
-          id="j"
-          cx={3092.3}
-          cy={968.8}
-          r={0.2}
-          fx={3092.3}
-          fy={968.8}
-          gradientTransform="rotate(93.3 1609215.68 -2649085.184) scale(1405.7 -1234.2)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#00cf5c" />
-          <Stop offset={0.3} stopColor="#00cf5c" stopOpacity={0.8} />
-          <Stop offset={0.6} stopColor="#00d05b" stopOpacity={0.2} />
-          <Stop offset={1} stopColor="#00d05b" stopOpacity={0} />
-        </RadialGradient>
-        <RadialGradient
-          id="k"
-          cx={3092.9}
-          cy={975.2}
-          r={0.2}
-          fx={3092.9}
-          fy={975.2}
-          gradientTransform="matrix(1523.058 1821.55694 3063.82747 -2561.7574 -7698928.8 -3135152.8)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#fff" stopOpacity={0.7} />
-          <Stop offset={0.8} stopColor="#fff" stopOpacity={0} />
-          <Stop offset={1} stopColor="#fff" stopOpacity={0} />
-        </RadialGradient>
-        <LinearGradient
-          id="b"
-          x1={1475.2}
-          x2={1647.6}
-          y1={-171.4}
-          y2={17.3}
-          gradientTransform="matrix(1 0 0 -1 -1065 312.6)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#35d07f" stopOpacity={0} />
-          <Stop offset={1} stopColor="#00d063" />
-        </LinearGradient>
-        <LinearGradient
-          id="c"
-          x1={1383.8}
-          x2={1621.8}
-          y1={-490.9}
-          y2={182}
-          gradientTransform="matrix(1 0 0 -1 -1065 312.6)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#f8cd0c" />
-          <Stop offset={0.3} stopColor="#f2ce27" />
-          <Stop offset={1} stopColor="#86d23c" stopOpacity={0} />
-        </LinearGradient>
-        <LinearGradient
-          id="d"
-          x1={1178.3}
-          x2={1711.7}
-          y1={-316.8}
-          y2={-21.4}
-          gradientTransform="matrix(1 0 0 -1 -1065 312.6)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#fdeb3f" />
-          <Stop offset={1} stopColor="#fbc74b" stopOpacity={0} />
-        </LinearGradient>
-        <LinearGradient
-          id="h"
-          x1={1417}
-          x2={1449.8}
-          y1={241.1}
-          y2={109.8}
-          gradientTransform="matrix(1 0 0 -1 -1065 312.6)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <Stop offset={0} stopColor="#39e2a4" />
-          <Stop offset={1} stopColor="#67e290" stopOpacity={0} />
-        </LinearGradient>
-        <ClipPath id="a">
-          <Path
-            d="M760.1 539c-61.3 84.8-184.3 196.4-315.6 263.9C313.2 735.4 190.2 623.8 128.9 539c-40.3-55.7-76.3-120.1-74.3-189.5 2.1-72 48.5-139.7 112.3-169 63.8-29.3 141.7-20.7 200 19 33.1 22.5 59.6 54.4 77.6 90.9 18-36.5 44.5-68.3 77.6-90.9 58.3-39.7 136.2-48.4 200-19 63.8 29.4 110.2 97.1 112.3 169 2 69.4-34 133.8-74.3 189.5Z"
-            fill="none"
-            strokeWidth={0}
-          />
-        </ClipPath>
-      </Defs>
-      <G
-        style={{
-          clipPath: 'url(#a)',
-        }}
-      >
+    <View testID={testID} style={[styles.container, style]}>
+      <Svg width={size} height={size} viewBox="0 0 64 64" fill="none">
         <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="#35d07f"
-          strokeWidth={0}
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M46.8357 3.77618C44.7624 2.67682 42.5534 1.79935 40.2403 1.17541L31.9758 9.44093L31.9752 9.44156V18.6385L31.9758 18.6379L46.8357 3.77618Z"
+          fill={color}
         />
         <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#b)"
-          fillOpacity={0.8}
-          strokeWidth={0}
+          d="M18.7713 61.0729L18.7713 2.89817C16.4022 3.96991 14.1873 5.32258 12.1691 6.9137L12.1691 57.0574C14.1872 58.6485 16.4022 60.0012 18.7713 61.0729Z"
+          fill={color}
         />
         <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#c)"
-          strokeWidth={0}
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M60.6275 18.0615C61.6693 20.2062 62.4779 22.4851 63.0204 24.8652L55.8865 32L63.015 39.1294C62.471 41.5082 61.661 43.7858 60.6181 45.9291L46.6907 32L60.6275 18.0615Z"
+          fill={color}
         />
         <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#d)"
-          strokeWidth={0}
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M52.4692 7.58289C54.1298 8.98344 55.6455 10.5504 56.9905 12.2581L37.2509 32L56.9777 51.7292C55.6317 53.436 54.115 55.0019 52.4536 56.4014L31.9758 35.9212L31.9752 35.9206V28.0794L31.9758 28.0788L52.4692 7.58289Z"
+          fill={color}
         />
         <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#e)"
-          strokeWidth={0}
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M40.2175 62.8018C42.5318 62.1794 44.7421 61.3032 46.8168 60.2049L31.9758 45.3621L31.9752 45.3615V54.5584L31.9758 54.5591L40.2175 62.8018Z"
+          fill={color}
         />
         <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#f)"
-          strokeWidth={0}
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M25.3736 63.2244L25.3736 0.746648C27.4831 0.307572 29.6691 0.0767936 31.9089 0.0767936L31.9313 0.0768007L31.9563 0.0768273L31.9758 0.0768619V9.44093V18.6379V28.0788V35.9212V45.3621V54.5591V63.8942C31.9535 63.8943 31.9312 63.8943 31.9089 63.8943C29.669 63.8943 27.4831 63.6635 25.3736 63.2244Z"
+          fill={color}
         />
         <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#g)"
-          strokeWidth={0}
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M5.56685 49.9985L5.56686 13.9726C2.0547 19.0989 0 25.3023 0 31.9855C0 38.6688 2.0547 44.8722 5.56685 49.9985Z"
+          fill={color}
         />
         <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#h)"
-          strokeWidth={0}
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M5.56686 13.9726C2.0547 19.0989 0 25.3023 0 31.9855C0 38.6688 2.0547 44.8722 5.56685 49.9985L5.56686 13.9726ZM60.6181 45.9291C61.661 43.7858 62.471 41.5082 63.015 39.1294L55.8865 32L63.0204 24.8652C62.4779 22.4851 61.6693 20.2062 60.6275 18.0615L46.6907 32L60.6181 45.9291ZM56.9777 51.7292L37.2509 32L56.9905 12.2581C55.6455 10.5504 54.1298 8.98344 52.4692 7.58289L31.9758 28.0788V18.6379L46.8357 3.77618C44.7624 2.67682 42.5534 1.79935 40.2403 1.17541L31.9758 9.44093V0.0768619L31.9563 0.0768273L31.9313 0.0768007L31.9089 0.0767936C29.6691 0.0767936 27.4831 0.307572 25.3736 0.746648L25.3736 63.2244C27.4831 63.6635 29.669 63.8943 31.9089 63.8943C31.9312 63.8943 31.9535 63.8943 31.9758 63.8942V54.5591L40.2175 62.8018C42.5318 62.1794 44.7421 61.3032 46.8168 60.2049L31.9758 45.3621V35.9212L52.4536 56.4014C54.115 55.0019 55.6317 53.436 56.9777 51.7292Z"
+          fill={color}
         />
-        <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#i)"
-          fillOpacity={0.6}
-          strokeWidth={0}
-        />
-        <Path
-          d="M35.2 35.2h820.6v820.6H35.2V35.2Z"
-          fill="url(#j)"
-          strokeWidth={0}
-        />
-        <Path
-          d="M0 0h889v889H0V0Z"
-          fill="url(#k)"
-          fillOpacity={0.5}
-          strokeWidth={0}
-        />
-      </G>
-      <Path
-        d="M494.9 700.9C517.5 530.8 600.5 434 725.8 346.3l-64.1-81.4c-82 60.6-171.5 146.5-213 265-33.9-96.8-104.6-181.8-218.7-265l-66.9 83.2c142.3 97.7 214 207.2 233.7 352.8h98Z"
-        fill="#fff"
-        strokeWidth={0}
-      />
-    </Svg>
+      </Svg>
+    </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    shadowOffset: { width: 0, height: 0 },
+    shadowRadius: 2,
+    shadowOpacity: 1,
+    shadowColor: 'rgba(46, 51, 56, 0.15)',
+  },
+})
